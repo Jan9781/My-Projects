@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - My Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-small"></div>
+                <span>My Projects Dashboard</span>
+            </div>
+            <div class="nav-menu">
+                <a href="projects.html" class="nav-link">View Projects</a>
+                <button id="logoutBtn" class="btn-logout">Logout</button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1 class="fade-in">Add New Project</h1>
+            <p class="fade-in-delay">Manage your scripts, extensions, and other projects</p>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="project-form-container">
+                <form id="projectForm" class="project-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="projectName">Project Name</label>
+                            <input type="text" id="projectName" name="projectName" required placeholder="Enter project name">
+                            <div class="input-underline"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectType">Project Type</label>
+                            <select id="projectType" name="projectType" required>
+                                <option value="">Select type</option>
+                                <option value="script">Script</option>
+                                <option value="extension">Extension</option>
+                                <option value="webapp">Web App</option>
+                                <option value="library">Library</option>
+                                <option value="tool">Tool</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="input-underline"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="projectDescription">Description</label>
+                        <textarea id="projectDescription" name="projectDescription" rows="4" required placeholder="Describe your project"></textarea>
+                        <div class="input-underline"></div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="projectLanguage">Primary Language</label>
+                            <input type="text" id="projectLanguage" name="projectLanguage" placeholder="e.g., Python, JavaScript">
+                            <div class="input-underline"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectUrl">URL/Repository</label>
+                            <input type="url" id="projectUrl" name="projectUrl" placeholder="https://github.com/...">
+                            <div class="input-underline"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="projectTags">Tags (comma-separated)</label>
+                        <input type="text" id="projectTags" name="projectTags" placeholder="automation, productivity, tools">
+                        <div class="input-underline"></div>
+                    </div>
+                    
+                    <div id="formMessage" class="form-message"></div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">
+                            <span>Add Project</span>
+                            <div class="btn-animation"></div>
+                        </button>
+                        <button type="reset" class="btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="projects-list-container">
+                <h2>Current Projects</h2>
+                <div id="projectsList" class="projects-list"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="background-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

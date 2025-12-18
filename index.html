@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="projects-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-small"></div>
+                <span>My Projects</span>
+            </div>
+            <div class="nav-menu">
+                <a href="login.html" class="nav-link admin-link">Admin Login</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to My Projects</h1>
+            <p class="hero-subtitle">Explore my collection of scripts, extensions, and tools</p>
+        </div>
+        <div class="hero-animation">
+            <div class="code-symbol">&lt;/&gt;</div>
+        </div>
+    </div>
+    
+    <div class="projects-container">
+        <div class="filter-section">
+            <h2>Filter Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="script">Scripts</button>
+                <button class="filter-btn" data-filter="extension">Extensions</button>
+                <button class="filter-btn" data-filter="webapp">Web Apps</button>
+                <button class="filter-btn" data-filter="library">Libraries</button>
+                <button class="filter-btn" data-filter="tool">Tools</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search projects...">
+                <div class="search-icon">🔍</div>
+            </div>
+        </div>
+        
+        <div id="projectsGrid" class="projects-grid">
+            <!-- Projects will be dynamically loaded here -->
+        </div>
+        
+        <div id="noProjects" class="no-projects" style="display: none;">
+            <div class="empty-state">
+                <div class="empty-icon">📁</div>
+                <h3>No projects found</h3>
+                <p>Try adjusting your filters or search terms</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 My Projects Portfolio</p>
+            <p>Built with passion for coding</p>
+        </div>
+    </footer>
+    
+    <div class="background-grid"></div>
+    
+    <script src="projects.js"></script>
+</body>
+</html>
